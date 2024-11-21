@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Bulk Barcode 128 Generator</title>
+  <script type='module' src="script.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Barcode 128 Generator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1> Bulk Barcode128 Generator</h1>
+        <div id="generate-text-area">
+            <textarea id="barcodeInput" style="height: 142px; width: 371px;"></textarea>
+            <div>
+              <label for="filterPattern">Filter Pattern:</label>
+              <input type="text" id="filterPattern" placeholder="Enter filter pattern ">
+          </div>
+            <div id="button-copntainer">
+                <button id="generate-button" class="button" type="'button">Generate Multiple Barcodes</button>
+                <button id="clear-button" class="button" type="'button">Clear Sheet</button>
+                <!-- <button id="paste-button" class="button" type="'button">Paste</button> -->
+            </div>
+        </div>
+      </div>
+        <div id="barcode-container"></div>
+        <hr>
+        <footer>
+          <p>This website uses the <a href="https://github.com/graphicore/librebarcode">Libre Barcode</a> encoder for generating Code 128 barcodes. 
+            Libre Barcode is an open-source project that provides barcode fonts and tools.
+             Learn more at <a href="https://github.com/graphicore/librebarcode">Libre Barcode on GitHub</a>! </p>
+        </footer>
+      </hr>
+    </body>
+
+</html>
