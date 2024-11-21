@@ -10,9 +10,12 @@ const barcodeContainer = document.getElementById('barcode-container');
 function generateBarcodes() {
     const inputText = barcodeInput.value;
     const filterPattern = document.getElementById('filterPattern').value;
-    const allBarcodeTexts= inputText.split('\n').filter(text => text.trim() !== "");
-
-    const barcodeTexts = allBarcodeTexts.filter(line => line.trim().startsWith(filterPattern)); 
+    const barcodeTexts = inputText.split('\n').filter(text => {
+        // split the filter pattern by "+"
+        const patterns = filterPattern.trim().split('+');
+        // check if the text matches any of the patterns
+        return patterns.some(pattern => text.includes(pattern.trim())); 
+      });
     barcodeContainer.innerHTML = ''; // Clear previous barcodes
  
     barcodeTexts.forEach(text => {
@@ -36,6 +39,7 @@ function clearBarcodes() {
 
 clearButton.addEventListener('click', clearBarcodes);
 generateButton.addEventListener('click', generateBarcodes);
+// paste button not working
 // pasteButton.addEventListener('click', async () => {
 //     try {
 //         barcodeInput.focus();

@@ -41,17 +41,21 @@ textarea{
 
  #barcode-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  gap: 10px;
+  grid-template-columns: auto auto auto auto ;
+  gap: 50px;
   background-color: #ffffff;
   padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  max-width: 100%;
 }
 
  #barcode-container > div { 
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   font-family: 'LibreBarcode128Text', sans-serif;
-  font-size: 55px;
+  font-size: 60px;
 } 
 
 footer {
